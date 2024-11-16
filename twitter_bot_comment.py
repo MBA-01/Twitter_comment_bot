@@ -21,12 +21,12 @@ from datetime import datetime, timedelta
 
 USERNAME = "EMAIL"   #Email
 PASSWORD = "PASSWORD"              #Password
-MY_TWITTER_HANDLE = "USERNAME"    #Username          Your Twitter handle to skip your own posts
+MY_TWITTER_HANDLE = "USERNAME"    #Username  | Your Twitter handle to skip your own posts
 
 
 
 
-openai.api_key = "sk-7m9eX0t6JY5hY1X4uGpZG3BlbkFJ1IwL2Wwv6t0O2wK4M9eV"
+openai.api_key = "key"
 
 # Configuration
 MAX_DAILY_COMMENTS = 500
@@ -265,7 +265,7 @@ def process_posts(driver):
             except Exception as ex:
                 webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
                 print("ESCAPE-4")
-                print("Maybe here's the shitty shit that's I'm looking for") #YOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+                #print("Maybe here's the problem that's I'm looking for")
 
             # Get all visible posts
             posts = WebDriverWait(driver, 10).until(
@@ -350,7 +350,7 @@ def main():
         except Exception as e:
             logging.error(f"Critical error occurred: {str(e)}")
             print(str(e))
-            print("SOME WEIRD ERROR OCCURED, CHECK THE EXCEPTION MESSAGE")
+            #print("SOME WEIRD ERROR OCCURED, CHECK THE EXCEPTION MESSAGE")
             webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
             print("ESCAPE-6")
 
